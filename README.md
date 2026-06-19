@@ -44,9 +44,9 @@ Para este projeto, além de migrarmos do JSON para o JSON Server, vamos permitir
 
 **Prints do trabalho**
 
-![Tela inicial do TampBR](imagens/Captura de tela 2026-06-18 231324.png)
+![Tela inicial do TampBR](imagens/tela-inicial.png)
 
-![Tela de detalhes do TampBR](imagens/Captura de tela 2026-06-18 231512.png)
+![Tela de detalhes do TampBR](imagens/tela-detalhes.png)
 
 
 ## **Orientações Gerais**
