@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TampBR</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-tamp">Tamp</span><span class="logo-br">BR</span>
+      </div>
+      <p class="tagline">Previsão do tempo para todo o Brasil</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <div class="search-box">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Digite o nome da cidade..."
+          autocomplete="off"
+        />
+        <button type="button" id="searchBtn">Buscar</button>
+      </div>
+      <div id="suggestions" class="suggestions hidden"></div>
+    </section>
+
+    <div id="infoCard" class="info-card">
+      <h3>Como usar</h3>
+      <p>Digite o nome de uma cidade e clique em "Buscar". Os cards abaixo mostrarão a previsão para os próximos dias com data, condição do tempo, temperaturas e probabilidade de chuva.</p>
+    </div>
+
+    <section id="forecastSection" class="hidden">
+      <div class="city-header">
+        <h2 id="cityName">—</h2>
+        <p id="cityState"></p>
+      </div>
+
+      <div class="days-selector">
+        <label for="daysSelect">Dias de previsão:</label>
+        <select id="daysSelect">
+          <option value="1">1 dia</option>
+          <option value="3">3 dias</option>
+          <option value="6" selected>6 dias</option>
+          <option value="14">14 dias</option>
+        </select>
+      </div>
+
+      <div id="cardsContainer" class="cards-container"></div>
+    </section>
+
+    <div id="errorMsg" class="error-msg hidden"></div>
+    <div id="loading" class="loading hidden">Buscando previsão...</div>
+  </main>
+
+  <footer>
+    <p>
+      TampBR &copy; 2026 · Dados fornecidos por
+      <a href="https://brasilapi.com.br" target="_blank">BrasilAPI</a> / CPTEC
+    </p>
+  </footer>
+
+  <script src="assets/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f6ff;
+  color: #0a2a5c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  background: linear-gradient(135deg, #0a2a5c, #1565c0);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo-tamp { color: #ffffff; }
+.logo-br   { color: #90caf9; }
+
+.tagline {
+  color: #bbdefb;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  font-weight: 300;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px 16px; /* Padding padrão para telas maiores */
+}
+
+/* ── Search ── */
+.search-section {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #90caf9;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  background: #ffffff;
+  color: #0a2a5c;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #1565c0;
+}
+
+.search-box button {
+  padding: 14px 26px;
+  background-color: #1565c0;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-box button:hover {
+  background-color: #0a2a5c;
+}
+
+/* ── Sugestões ── */
+.suggestions {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  /* Ajuste aqui: removido 'right: 80px' para ser mais flexível */
+  width: calc(100% - 80px); /* Ocupa a largura do input, menos o botão */
+  background: #ffffff;
+  border: 2px solid #90caf9;
+  border-radius: 10px;
+  z-index: 100;
+  max-height: 240px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.15s;
+}
+
+.suggestion-item:hover {
+  background-color: #e3f2fd;
+}
+
+/* ── City Header ── */
+.city-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.city-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0a2a5c;
+}
+
+.city-header p {
+  font-size: 0.95rem;
+  color: #1565c0;
+  margin-top: 4px;
+}
+
+/* ── Days Selector ── */
+.days-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+.days-selector select {
+  padding: 8px 14px;
+  border: 2px solid #90caf9;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #0a2a5c;
+  background: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+/* ── Cards ── */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 2px solid #90caf9;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #0a2a5c;
+  box-shadow: 0 2px 10px rgba(21, 101, 192, 0.12);
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1565c0;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 2px solid #bbdefb;
+  border-radius: 14px;
+  padding: 20px 14px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(21, 101, 192, 0.15);
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #1565c0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  display: block;
+}
+
+.card-desc {
+  font-size: 0.8rem;
+  color: #0a2a5c;
+  font-weight: 500;
+  line-height: 1.4;
+  min-height: 36px;
+  word-break: break-word;
+}
+
+.card-temps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.temp-max {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e53935;
+}
+
+.temp-min {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1565c0;
+}
+
+.card-extra {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  color: #1565c0;
+  flex-wrap: wrap;
+}
+
+.card-extra span {
+  background: #e3f2fd;
+  border-radius: 6px;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+/* ── Utilitários ── */
+.hidden {
+  display: none;
+}
+
+.loading {
+  text-align: center;
+  color: #1565c0;
+  font-size: 1rem;
+  margin-top: 40px;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.error-msg {
+  text-align: center;
+  background: #ffebee;
+  color: #c62828;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+/* ── Footer ── */
+footer {
+  background: #0a2a5c;
+  color: #90caf9;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.82rem;
+}
+
+footer a {
+  color: #bbdefb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  /* Ajustes para tablets e telas menores */
+  .search-box button {
+    padding: 14px 20px; /* Diminui um pouco o padding do botão */
+    font-size: 0.9rem;
+  }
+
+  .suggestions {
+    width: calc(100% - 70px); /* Ajusta a largura das sugestões para o botão menor */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para celulares */
+  .logo {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  main {
+    padding: 24px 12px; /* Diminui o padding lateral em telas muito pequenas */
+  }
+
+  .search-box {
+    flex-direction: column; /* Empilha input e botão */
+    gap: 12px;
+  }
+
+  .search-box input {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .search-box button {
+    width: 100%; /* Botão ocupa a largura total */
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .suggestions {
+    width: 100%; /* Sugestões ocupam a largura total do input empilhado */
+    right: auto; /* Remove o right fixo */
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Cards um pouco menores */
+    gap: 12px;
+  }
+
+  .forecast-card {
+    padding: 16px 10px;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .card-desc, .card-temps, .card-extra {
+    font-size: 0.7rem;
+  }
+
+  .temp-max, .temp-min {
+    font-size: 0.9rem;
+  }
+}

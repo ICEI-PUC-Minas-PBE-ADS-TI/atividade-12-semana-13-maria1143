@@ -6,10 +6,10 @@ Para este projeto, além de migrarmos do JSON para o JSON Server, vamos permitir
 
 ## Informações Gerais
 
-- Nome:
-- Matrícula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Maria Luiza Sousa Montaño
+- Matrícula: 925569
+- Proposta de projeto escolhida: Previsão do tempo
+- Breve descrição sobre seu projeto: O projeto é um site de previsão do tempo que permite aos usuários buscar a previsão para diferentes cidades. Ele exibe informações como temperatura, condições climáticas e probabilidade de chuva para os próximos dias. O site é projetado para ser fácil de usar, com uma interface limpa e intuitiva, e é ideal para quem deseja se manter informado sobre o clima em suas cidades favoritas.
 
 **Prints do trabalho**
 
@@ -20,31 +20,33 @@ Para este projeto, além de migrarmos do JSON para o JSON Server, vamos permitir
   "cidades": [
     {
       "id": 1,
-      "nome": "Paris",
-      "descricao": "Capital francesa famosa por arte, gastronomia e arquitetura icônica.",
-      "conteudo": "Paris oferece museus de classe mundial, boulevards arborizados e cafés charmosos. Ideal para quem busca história, cultura e experiências gastronômicas.",
-      "pais": "França",
-      "destaque": true,
-      "data": "2025-03-30",
-      "imagemPrincipal": "img/paris.jpg"
+      "nome": "São Paulo",
+      "cityCode": 999,
+      "estado": "SP",
+      "descricaoCurta": "A maior metrópole do Brasil",
+      "descricaoCompleta": "São Paulo é o centro financeiro do país, com clima subtropical úmido e variações frequentes de temperatura.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/...",
+      "categoria": "Grande Metrópole",
+      "populacao": 12300000,
+      "tags": ["metrópole", "sudeste", "urbano"],
+      "destaque": true
     }
   ],
-  "atracoes": [
-    {
-      "id": 1,
-      "cidadeId": 1,
-      "nome": "Torre Eiffel",
-      "descricao": "Monumento símbolo de Paris com mirantes panorâmicos.",
-      "imagem": "img/atracoes/torre_eiffel.jpg"
-    }
-  ]
+  "categorias": [
+    { "id": 1, "nome": "Grande Metrópole" },
+    { "id": 2, "nome": "Capital" },
+    { "id": 3, "nome": "Cidade Histórica" },
+    { "id": 4, "nome": "Litoral" }
+  ],
+  "favoritos": []
 }
 ```
 
-<< COLOQUE A IMAGEM DA HOME AQUI >>
+**Prints do trabalho**
 
-<< COLOQUE A IMAGEM DA TELA DE DETALHES AQUI >>
+![Tela inicial do TampBR](imagens/Captura de tela 2026-06-18 231324.png)
 
+![Tela de detalhes do TampBR](imagens/Captura de tela 2026-06-18 231512.png)
 
 
 ## **Orientações Gerais**
